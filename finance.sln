@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "finance.api", "finance.api.csproj", "{71AD94F5-673A-467A-A12F-2643CC3242F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "finance.Mongo.DB", "..\Finance.Mongo.DB\finance.Mongo.DB.csproj", "{095361D5-8184-4EFA-B46A-FD7860849015}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71AD94F5-673A-467A-A12F-2643CC3242F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71AD94F5-673A-467A-A12F-2643CC3242F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71AD94F5-673A-467A-A12F-2643CC3242F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71AD94F5-673A-467A-A12F-2643CC3242F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095361D5-8184-4EFA-B46A-FD7860849015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095361D5-8184-4EFA-B46A-FD7860849015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095361D5-8184-4EFA-B46A-FD7860849015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095361D5-8184-4EFA-B46A-FD7860849015}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DF858A4-53C9-471B-960D-D2FA40A26E17}
+	EndGlobalSection
+EndGlobal
