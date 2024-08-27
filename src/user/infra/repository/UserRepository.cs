@@ -36,7 +36,7 @@ namespace finance.src.user.infra.repository
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<UserEntity>> GetAllAsync() =>
+        public async Task<List<UserEntity>> GetAllAsync() =>
              await _users.Find(user => true).ToListAsync();
 
         public async  Task<UserEntity> GetByIdAsync(string id)

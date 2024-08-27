@@ -2,6 +2,6 @@
 {
     public interface ICreateUserPort
     {
-        Task<IEnumerable<UserEntity>> execute(IInputCreateUser input);
+        Task<UserEntity> execute(IInputCreateUser input);
     }
 }

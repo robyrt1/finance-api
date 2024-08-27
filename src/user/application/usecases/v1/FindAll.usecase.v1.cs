@@ -14,7 +14,7 @@ namespace finance.src.user.application.usecases.v1
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        public async Task<IEnumerable<UserCollection>> execute()
+        public async Task<List<UserEntity>> execute()
         {
             var users = await _userRepository.GetAllAsync();
 
@@ -24,7 +24,7 @@ namespace finance.src.user.application.usecases.v1
                 throw new NotFoundException("No users found.");
             }
 
-            return (IEnumerable<UserCollection>)users;
+            return (List<UserEntity>)users;
         }
     }
 }

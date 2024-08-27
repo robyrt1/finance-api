@@ -1,6 +1,5 @@
 using finance.api.src.shared.infratruction.middleware;
 using finance.src.user.infra.module.user;
-using finance.src.user.infra.repository;
 using Finance.src.shared.application.port.database;
 using Finance.src.shared.infratruction.services.database;
 using Microsoft.Extensions.Options;
@@ -12,9 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add<CustomExceptionFilter>();
+}).AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.IncludeFields = true;
 });
 
-/*Router*/
 
 
 builder.Services.AddEndpointsApiExplorer();

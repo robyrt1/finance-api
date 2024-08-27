@@ -1,4 +1,5 @@
-﻿using finance.src.user.domain.port.usecases.CreateUser.v1;
+﻿using finance.api.src.user.application.usecases.v1.dtos;
+using finance.src.user.domain.port.usecases.CreateUser.v1;
 using Microsoft.AspNetCore.Mvc;
 
 namespace finance.src.user.presentation.v1
@@ -14,11 +15,18 @@ namespace finance.src.user.presentation.v1
         }
 
         [HttpPost]
-        public async Task<ActionResult<IEnumerable<UserEntity>>> CreateUser(IInputCreateUser user)
+        public async Task<ActionResult<UserEntity>> CreateUser([FromBody] CreateUserDto user)
         {
             Console.WriteLine("Controller method reached");
-            var newUser =  await _createUserPort.execute(user);
-            return Ok(newUser);
+            //_ = new CreateUserDto
+            //{
+            //    UserName = user.UserName,
+            //    Email = user.Email,
+            //    Password = user.Password
+            //};
+
+            var result =  await _createUserPort.execute(user);
+            return Created(string.Empty, result);
         }
 
 
