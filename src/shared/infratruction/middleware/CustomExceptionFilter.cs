@@ -9,10 +9,11 @@ namespace finance.api.src.shared.infratruction.middleware
     {
         public void OnException(ExceptionContext context)
         {
+            ;
            
             if (context.Exception is NotFoundException)
             {
-                context.Result = new ObjectResult(new { statusCode = HttpStatusCode.BadRequest, error = context.Exception.Message, date = DateTime.Now, data = context.HttpContext.Response.Body.ToString() })
+                context.Result = new ObjectResult(new { statusCode = context.HttpContext.Response.StatusCode.ToString(), error = context.Exception.Message, date = DateTime.Now, data = context.HttpContext.Response.Body.ToString() })
                 {
                     StatusCode = (int)HttpStatusCode.NotFound
                 };

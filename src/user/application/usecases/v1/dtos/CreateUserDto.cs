@@ -1,5 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
+﻿
 namespace finance.api.src.user.application.usecases.v1.dtos
 {
     public class CreateUserDto: IInputCreateUser

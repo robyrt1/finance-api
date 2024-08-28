@@ -1,7 +1,5 @@
 ﻿
 using Finance.src.shared.application.port.database;
-using Microsoft.SharePoint.Client;
-using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace finance.src.user.infra.repository
