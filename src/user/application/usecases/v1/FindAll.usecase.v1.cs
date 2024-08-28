@@ -1,4 +1,5 @@
-﻿using finance.src.shared.infratruction.exceptions.http;
+﻿using finance.api.src.shared.infratruction.exceptions.http;
+using finance.src.shared.infratruction.exceptions.http;
 using finance.src.user.domain.port.usecases.findAll.v1;
 
 namespace finance.src.user.application.usecases.v1

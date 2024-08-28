@@ -17,7 +17,7 @@ namespace finance.src.user.application.usecases.v1
         }
 
 
-        public async Task<ActionResult<UserEntity>> execute(IInputCreateUser input)
+        public async Task<UserEntity> execute(IInputCreateUser input)
         {
             try
             {
@@ -25,8 +25,8 @@ namespace finance.src.user.application.usecases.v1
 
             if (shouldUserByEmail != null)
             {
-                    return new BadRequestObjectResult(new { message = "Usuário já cadastrado" });
-                    //throw new NotFoundException("Usuário já cadastrado");
+            
+                throw new ConflictException("Usuário já cadastrado");
             }
 
             input.Password = _passwordHasher.HashPassword(input.Password);
@@ -35,7 +35,7 @@ namespace finance.src.user.application.usecases.v1
 
             }
             catch (Exception ex) { 
-                throw ex;
+                throw;
             }
         }
     }

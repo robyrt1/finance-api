@@ -24,9 +24,8 @@ namespace finance.src.user.presentation.v1
             if (userValidator.IsValid) {
                 return BadRequest(ModelState);
             }
-            
             var result =  await _createUserPort.execute(user);
-            return new OkObjectResult(result);
+            return Created(string.Empty, result);
         }
 
 

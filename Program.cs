@@ -1,18 +1,19 @@
 using finance.api.src.shared.infratruction.middleware;
 using finance.src.user.infra.module.user;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers(options =>
 {
-    options.Filters.Add<CustomExceptionFilter>();
+    options.Filters.Add<ConflictExceptionFilter>();
+    options.Filters.Add<NotFoundExceptionFilter>();
 }).AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.IncludeFields = true;
 });
-//.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
 
 
 
