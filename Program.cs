@@ -1,4 +1,5 @@
-using finance.api.src.shared.infratruction.middleware;
+using finance.api.src.auth.infra.module;
+using finance.api.src.shared.infratruction.middleware.http;
 using finance.src.user.infra.module.user;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -11,6 +12,7 @@ builder.Services.AddControllers(options =>
 {
     options.Filters.Add<ConflictExceptionFilter>();
     options.Filters.Add<NotFoundExceptionFilter>();
+    options.Filters.Add<UnauthorizedExceptionFilter>();
 }).AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.IncludeFields = true;
@@ -24,6 +26,7 @@ builder.Services.AddSwaggerGen();
 /* CONTAINER */
 
 builder.Services.AddUserServices();
+builder.Services.AddAuthServices();
 builder.Services.AddCommonServices(builder.Configuration);
 
 /*Version*/

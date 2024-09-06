@@ -21,9 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="src\auth\domain\validator\" />
     <Folder Include="src\auth\infra\repository\" />
-    <Folder Include="src\auth\presentation\v1\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace finance.api.src.shared.infratruction.middleware
+namespace finance.api.src.shared.infratruction.middleware.http
 {
     public class ConflictExceptionFilter : IExceptionFilter
     {
@@ -27,5 +27,5 @@ namespace finance.api.src.shared.infratruction.middleware
                 return;
             }
         }
-        }
+    }
 }

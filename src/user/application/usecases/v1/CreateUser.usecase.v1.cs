@@ -1,7 +1,5 @@
 ﻿using finance.src.shared.infratruction.exceptions.http;
 using finance.src.user.domain.port.usecases.CreateUser.v1;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 
 
 namespace finance.src.user.application.usecases.v1

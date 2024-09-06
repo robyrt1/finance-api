@@ -1,4 +1,4 @@
-﻿namespace finance.api.src.shared.infratruction.middleware
+﻿namespace finance.api.src.shared.infratruction.middleware.http
 {
     using finance.api.src.shared.infratruction.exceptions.http;
     using Microsoft.AspNetCore.Mvc;
