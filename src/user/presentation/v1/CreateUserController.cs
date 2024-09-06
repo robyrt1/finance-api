@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace finance.src.user.presentation.v1
 {
-    [Route("api/user/v1/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/user/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class CreateUserController: ControllerBase
     {

@@ -2,6 +2,7 @@ using finance.api.src.shared.infratruction.middleware;
 using finance.src.user.infra.module.user;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddUserServices();
 builder.Services.AddCommonServices(builder.Configuration);
 
+/*Version*/
+builder.Services.AddApiVersioning(options =>
+{
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.ReportApiVersions = true;
+});
 
 
 //SERVER
