@@ -1,5 +1,4 @@
-﻿using finance.api.src.auth.domain.entity;
-using finance.api.src.auth.domain.port.usecases.login.v1;
+﻿using finance.api.src.auth.domain.port.usecases.login.v1;
 using finance.api.src.shared.application.port.services;
 using finance.api.src.shared.infratruction.exceptions.http;
 

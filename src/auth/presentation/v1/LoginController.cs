@@ -19,7 +19,7 @@ namespace finance.api.src.auth.presentation.v1
         {
             var input = await validator.ValidateAsync(body);
 
-            if (input.IsValid)
+            if (!input.IsValid)
             {
                 return BadRequest(ModelState);
             }
