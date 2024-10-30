@@ -6,7 +6,7 @@ using finance.src.user.domain.port.usecases.findAll.v1;
 using finance.src.user.infra.repository;
 using FluentValidation;
 
-namespace finance.src.user.infra.module.user
+namespace finance.api.src.user.infra.module
 {
     public static class UserModule
     {

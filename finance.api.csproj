@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="src\auth\infra\repository\" />
+    <Folder Include="src\category\domain\port\usecases\getAllSubCategory\" />
   </ItemGroup>
 
   <ItemGroup>

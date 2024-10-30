@@ -1,8 +1,7 @@
 using finance.api.src.auth.infra.module;
+using finance.api.src.category.infra.module;
 using finance.api.src.shared.infratruction.middleware.http;
-using finance.src.user.infra.module.user;
-using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Http.HttpResults;
+using finance.api.src.user.infra.module;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,6 +26,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddUserServices();
 builder.Services.AddAuthServices();
+builder.Services.AddCategoryServices();
 builder.Services.AddCommonServices(builder.Configuration);
 
 /*Version*/
