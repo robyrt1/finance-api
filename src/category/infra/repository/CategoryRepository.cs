@@ -19,5 +19,17 @@ namespace finance.api.src.category.infra.repository
 
         public async Task<Category> GetByIdAsync(string id) => 
             await _Category.Find(category => category.Id == id).FirstOrDefaultAsync();
+
+        public async Task<Category> GetByDescriptAsync(string descript) =>
+            await _Category.Find(category => category.Descript == descript).FirstOrDefaultAsync();
+
+        public async Task<Category> CreateCategoryAsync(Category input) 
+        {
+            var newCategory = new Category(input);
+
+            await _Category.InsertOneAsync(newCategory);
+
+            return newCategory;
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace finance.api.src.category.application.usecases.v1
         public FindAllCategoryUseCaseV1(ILogger<FindAllCategoryUseCaseV1> logger, ICategoryRepositoryPort repositoryPort) 
         {
             _repositoryPort = repositoryPort;
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger)); 
         }
 
 

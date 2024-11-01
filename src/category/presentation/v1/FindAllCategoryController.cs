@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace finance.api.src.category.presentation.v1
 {
     [ApiVersion("1.0")]
-    [Route("api/category/v{version:apiVersion}/[controller]")]
+    [Route("api/category/v{version:apiVersion}")]
     [ApiController]
     public class FindAllCategoryController: ControllerBase
     {

@@ -3,5 +3,6 @@
     public interface ICreateCategoryInput
     {
         public string Descript {  get; set; }
+        public string Type { get; set; }
     }
 }
