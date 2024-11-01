@@ -3,10 +3,11 @@ using FluentValidation;
 
 namespace finance.api.src.category.domain.validator
 {
-    public class ValidateCreateCategory: AbstractValidator<CreateCategoryDto>
+    public class ValidateUpdateCategory : AbstractValidator<UpdateCategoryDto>
     {
-        public ValidateCreateCategory() 
+        public ValidateUpdateCategory() 
         {
+            RuleFor(category => category.Id).NotEmpty().NotNull().WithMessage("Id is not null");
             RuleFor(category => category.Descript).NotEmpty().NotNull().WithMessage("Descript is not null");
             RuleFor(category => category.Type)
                 .NotEmpty()

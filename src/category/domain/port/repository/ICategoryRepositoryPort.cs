@@ -8,5 +8,7 @@ namespace finance.api.src.category.domain.port.repository
         Task<Category> GetByIdAsync(string id);
         Task<Category> GetByDescriptAsync(string descript);
         Task<Category> CreateCategoryAsync(Category category);
+
+        Task<Category> UpdateCategoryAsync(string id, Category updatedCategory);
     }
 }

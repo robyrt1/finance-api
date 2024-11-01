@@ -24,7 +24,7 @@ namespace finance.api.src.category.presentation.v1
             var categoryValidate = validator.Validate(category);
             if (!categoryValidate.IsValid) 
             {
-                return BadRequest(ModelState);
+                return BadRequest(categoryValidate.Errors);
             }
 
             var categoryCreated = await _createcategoryUseCase.execute(category);

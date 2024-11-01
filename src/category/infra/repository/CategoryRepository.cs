@@ -31,5 +31,20 @@ namespace finance.api.src.category.infra.repository
 
             return newCategory;
         }
+
+        public async Task<Category> UpdateCategoryAsync(string id, Category updatedCategory)
+        {
+            var filter = Builders<Category>.Filter.Eq(category => category.Id, id);
+            var update = Builders<Category>.Update
+                .Set(category => category.Descript, updatedCategory.Descript)  
+                .Set(category => category.Type, updatedCategory.Type); 
+            var options = new FindOneAndUpdateOptions<Category>
+            {
+                ReturnDocument = ReturnDocument.After
+            };
+
+            return await _Category.FindOneAndUpdateAsync(filter, update, options);
+        }
+
     }
 }
