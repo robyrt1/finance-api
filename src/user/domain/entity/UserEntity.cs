@@ -5,7 +5,7 @@ public class UserEntity
 {
     [BsonId]
     [BsonRepresentation(BsonType.String)]
-    public String Id { get; set; }
+    public string Id { get; set; }
     [BsonElement("UserName")]
     public string UserName { get; set; }
     [BsonElement("Email")]
