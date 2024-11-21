@@ -25,8 +25,4 @@
     <Folder Include="src\category\domain\port\usecases\updateSubCategory\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Finance.Mongo.DB\finance.Mongo.DB.csproj" />
-  </ItemGroup>
-
 </Project>

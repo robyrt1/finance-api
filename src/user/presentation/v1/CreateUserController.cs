@@ -22,8 +22,8 @@ namespace finance.src.user.presentation.v1
 
             var userValidator = await validator.ValidateAsync(user);
 
-            if (userValidator.IsValid) {
-                return BadRequest(ModelState);
+            if (userValidator.IsValid is false) {
+                return BadRequest(userValidator.Errors);
             }
             var result =  await _createUserPort.execute(user);
             return Created(string.Empty, result);
