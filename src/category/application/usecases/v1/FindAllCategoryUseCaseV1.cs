@@ -21,7 +21,7 @@ namespace finance.api.src.category.application.usecases.v1
         {
             var categories = await _repositoryPort.GetAllAsync();
 
-            if (categories == null || !categories.Any())
+            if (categories is null || !categories.Any())
             {
                 _logger.LogWarning("Not found Categories.");
                 throw new NotFoundException("Not found Categories.");

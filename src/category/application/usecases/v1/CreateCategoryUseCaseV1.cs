@@ -2,7 +2,6 @@
 using finance.api.src.category.domain.port.repository;
 using finance.api.src.category.domain.port.usecases.createCategory.v1;
 using finance.api.src.category.domain.port.usecases.createCategory.v1.type;
-using finance.api.src.category.infra.repository;
 using finance.src.shared.infratruction.exceptions.http;
 
 namespace finance.api.src.category.application.usecases.v1
@@ -11,7 +10,7 @@ namespace finance.api.src.category.application.usecases.v1
     {
         public ICategoryRepositoryPort _categoryRepository;
 
-        public CreateCategoryUseCaseV1(ICategoryRepositoryPort categoryRepositoryPort) 
+        public CreateCategoryUseCaseV1(ICategoryRepositoryPort categoryRepositoryPort)
         {
             _categoryRepository = categoryRepositoryPort;
         }
@@ -22,7 +21,7 @@ namespace finance.api.src.category.application.usecases.v1
             try
             {
                 var existingCategory = await _categoryRepository.GetByDescriptAsync(input.Descript);
-                if (existingCategory != null)
+                if (existingCategory is not null)
                 {
                     throw new ConflictException("Category already exists!");
                 }
@@ -35,7 +34,7 @@ namespace finance.api.src.category.application.usecases.v1
 
                 return await _categoryRepository.CreateCategoryAsync(category);
             }
-            catch (Exception ex) 
+            catch (Exception)
             {
                 throw;
             }

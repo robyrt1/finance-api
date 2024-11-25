@@ -19,7 +19,7 @@ namespace finance.api.src.category.application.usecases.v1
             try
             {
                 var existingCategory = await _categoryRepository.GetByIdAsync(input.Id);
-                if (existingCategory == null)
+                if (existingCategory is null)
                 {
                     throw new KeyNotFoundException("Category not found.");
                 }

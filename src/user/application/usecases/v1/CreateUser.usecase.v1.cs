@@ -32,7 +32,7 @@ namespace finance.src.user.application.usecases.v1
             return await _userRepository.CreateAsync(input);
 
             }
-            catch (Exception ex) { 
+            catch (Exception) { 
                 throw;
             }
         }
