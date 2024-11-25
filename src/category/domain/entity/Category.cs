@@ -14,6 +14,9 @@ namespace finance.api.src.category.domain.entity
         [BsonElement("type")]
         public string Type { get; set; }
 
+        [BsonElement("id_user")]
+        [BsonRepresentation(BsonType.String)]
+        public string Id_User { get; set; }
 
         public Category() { }
 
@@ -22,6 +25,7 @@ namespace finance.api.src.category.domain.entity
             Id = category.Id ?? Guid.NewGuid().ToString();
             Descript = category.Descript;
             Type = category.Type;
+            Id_User = category.Id_User;
         }   
     }
 }

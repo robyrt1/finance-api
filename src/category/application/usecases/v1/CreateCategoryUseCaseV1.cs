@@ -29,7 +29,8 @@ namespace finance.api.src.category.application.usecases.v1
                 var category = new Category
                 {
                     Descript = input.Descript,
-                    Type = input.Type
+                    Type = input.Type,
+                    Id_User = input.Id_User,
                 };
 
                 return await _categoryRepository.CreateCategoryAsync(category);

@@ -6,5 +6,6 @@ namespace finance.api.src.category.application.usecases.v1.dtos
     {
         public string Descript {  get; set; }
         public string Type { get; set; }
+        public string Id_User { get; set; }
     }
 }
